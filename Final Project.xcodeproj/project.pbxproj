@@ -12,6 +12,7 @@
 		489F96D729D9E48200DB7D8F /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 489F96D629D9E48200DB7D8F /* FirebaseMessaging */; };
 		489F96D929D9E48200DB7D8F /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 489F96D829D9E48200DB7D8F /* FirebaseStorage */; };
 		489F96DB29D9E8FC00DB7D8F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 489F96DA29D9E8FC00DB7D8F /* GoogleService-Info.plist */; };
+		489F96DD29D9EE5F00DB7D8F /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489F96DC29D9EE5F00DB7D8F /* RegistrationVC.swift */; };
 		8ABBC2E329D220E500E696DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABBC2E229D220E500E696DD /* AppDelegate.swift */; };
 		8ABBC2E529D220E500E696DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABBC2E429D220E500E696DD /* SceneDelegate.swift */; };
 		8ABBC2E729D220E500E696DD /* RootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABBC2E629D220E500E696DD /* RootVC.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		489F96DA29D9E8FC00DB7D8F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		489F96DC29D9EE5F00DB7D8F /* RegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
 		8ABBC2DF29D220E500E696DD /* Final Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Final Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ABBC2E229D220E500E696DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8ABBC2E429D220E500E696DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				8ABBC2E629D220E500E696DD /* RootVC.swift */,
+				489F96DC29D9EE5F00DB7D8F /* RegistrationVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -88,8 +91,8 @@
 				8ABBC2E829D220E500E696DD /* Main.storyboard */,
 				8ABBC2EB29D220E500E696DD /* Assets.xcassets */,
 				8ABBC2ED29D220E500E696DD /* LaunchScreen.storyboard */,
-				8ABBC2F029D220E500E696DD /* Info.plist */,
 				489F96DA29D9E8FC00DB7D8F /* GoogleService-Info.plist */,
+				8ABBC2F029D220E500E696DD /* Info.plist */,
 			);
 			path = "Final Project";
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				489F96DD29D9EE5F00DB7D8F /* RegistrationVC.swift in Sources */,
 				8ABBC2E729D220E500E696DD /* RootVC.swift in Sources */,
 				8ABBC2E329D220E500E696DD /* AppDelegate.swift in Sources */,
 				8ABBC2E529D220E500E696DD /* SceneDelegate.swift in Sources */,

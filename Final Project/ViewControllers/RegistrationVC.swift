@@ -79,7 +79,7 @@ class RegistrationVC: UIViewController {
         
         auth.fetchSignInMethods(forEmail: email) { (providers, error) in
             if let error = error {
-                print(error.localizedDescription)
+                print("Error: \(error.localizedDescription)")
             } else if let providers = providers {
                 if providers.count > 0 {
                     let alert = UIAlertController(title: "", message: "User already exists", preferredStyle: .alert)
@@ -93,7 +93,7 @@ class RegistrationVC: UIViewController {
         }
         auth.createUser(withEmail: email, password: password) { authResult, error in
             if let error = error {
-                print(error)
+                print("Error: \(error.localizedDescription)")
                 return
             } else if let authResult = authResult {
                 let db = Firestore.firestore()

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class RootVC: UIViewController {
 
@@ -18,10 +19,27 @@ class RootVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
     @IBAction func login(_ sender: UIButton) {
+        guard let email = usernameTF.text, !email.isEmpty else {
+            showAlert(title: "", message: "Please enter Email-ID.")
+            return
+        }
+        guard let password = passwordTF.text, !password.isEmpty else {
+            showAlert(title: "", message: "Please enter password.")
+            return
+        }
+        
+        let auth = FirebaseAuth.Auth.auth()
+        
+        auth.signIn(withEmail: email, password: password) { authResult, error in
+            guard let user = authResult?.user, error == nil else {
+                print("Error: \(error!.localizedDescription)")
+                return
+            }
+            print("User \(user.email!) has signed in successfully")
+        }
     }
     
     @IBAction func userRegistration(_ sender: UIButton) {
@@ -48,5 +66,10 @@ class RootVC: UIViewController {
         }
     }
     
+    private func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
 }
 
